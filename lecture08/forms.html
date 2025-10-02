@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Registration Form</legend>
+
+            <label for="datepicker">Date</label>
+            <input type="date" id="datepicker">
+            <br><br>
+            
+            <label for="type">Choose Type</label>
+            <select name="Type" id="type">
+                <option value="select">--Select--</option>
+                <option value="faculty">Faculty</option>
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+
+            <!-- add faded text (placeholder) by using placeholder -->
+            <label for="email">Enter Email ID: </label> 
+            <input type="text" id = "email" placeholder="abcd@example.com">
+            <!-- default input type is text -->
+            <br><br>
+
+            <label for="pass">Dont Enter Password: </label>
+            <input title="fishing" type="text" id = "password"  name="pass">
+            <br><br>
+            <!--
+                It is better to declare title attribute also 
+                in case where you are providing name attribute
+                but not id attribute to the label
+                otherwise vs code will show warning
+                -->
+                
+            <label for="dottedpass">Enter Password: </label>
+            <input type="password" name="" id="dottedpass" placeholder="enter password">
+            <br><br>
+                
+            <fieldset>
+                <legend>Choose Gender: </legend>
+                <label for="male">Male</label>
+                <input type="radio" id="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female">
+            </fieldset>
+            <br><br>
+            
+            <fieldset>
+                <legend>Choose Languages: </legend>
+                <label for="punjabi">Punjabi</label>
+                <input type="checkbox" id="punjabi">
+                <label for="hindi">Hindi</label>
+                <input type="checkbox" id="hindi">
+                <label for="english">English</label>
+                <input type="checkbox" id="english">
+            </fieldset>
+            <br>
+            
+            <textarea name="text" id="textarea" 
+            cols="30" rows="10" placeholder="enter text here.."></textarea>
+            <br><br>
+            
+            <label for="fileupload">Upload File: </label>
+            <input type="file" id="fileupload">
+            <br><br>
+
+            <!-- To change default "Choose file"text by browser to something else -->
+            <label for="fileupload">Upload File: </label>
+            <input type="file" id="fileupload" style="display:none" />
+            <!-- <button onclick="document.getElementById('fileupload').click()">Get file</button> -->
+            <!-- to remove comparisons -->
+            <button onclick="this.previousElementSibling.click()">Get file</button>
+            <br><br><br><br>
+            
+            <input type="submit" value = "Click Here to Submit">
+            <button>Click here</button>
+            <!-- default button type is submit -->
+            <br>
+            
+            <label for="imagebutton">Submit Button in form of image: </label>
+            <input type="image" id="imagebutton"
+                    src="https://www.w3schools.com/tags/img_submit.gif"
+                    alt="Submit" width="30" height="30">
+            </input>
+            <br><br>
+        </fieldset>
+    </form>
+</body>
+
+</html>
