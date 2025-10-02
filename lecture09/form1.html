@@ -3,9 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Application</title>
 </head>
+
+
 <body>
-    
+    <h2>Job Application</h2>
+    <form>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <label for="phone">Phone Number: </label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <label for="resume">Resume: </label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+        <br><br>
+        <label for="experience">Experience: </label>
+        <input type="number" id="experience" name="experience" min="0" max="50" placeholder="yrs" required>
+        <br><br>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <input type="checkbox" id="html" name="skills" value="html">
+            <label for="html">HTML</label><br>
+            <input type="checkbox" id="css" name="skills" value="css">
+            <label for="css">CSS</label><br>
+            <input type="checkbox" id="js" name="skills" value="js">
+            <label for="js">JavaScript</label><br>
+        </fieldset>
+        <br>
+
+        <label for="education">Highest Education: </label>
+        <select name="education" id="education">
+            <option value="select">--Select--</option>
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="phd">PhD</option>
+        </select>
+        <br><br>
+        
+        In this we are able to select both options
+        but we want only one option to be selected
+        <br>
+        <fieldset>
+            <legend>Avalability: </legend>
+            <input title="part-time" type="radio" name,id = "radio1" value="part">
+            <label for="radio1">Part-time</label><br>
+            <input title="full-time" type="radio" name,id = "radio2" value="full">
+            <label for="radio2">Full-time</label>
+        </fieldset>
+        <br><br>
+
+        so we will use same name attribute
+        for both radio buttons
+        <br>
+        <fieldset>
+            <legend>Avalability: </legend>
+            <input title="part-time" type="radio" name="availability" id = "radio3" value="part">
+            <label for="radio3">Part-time</label><br>
+            <input title="full-time" type="radio" name="availability" id = "radio4" value="full">
+            <label for="radio4">Full-time</label>
+        </fieldset>
+        <br><br>
+
+        <label for="additional">Additional Information: </label><br>
+        <textarea title="additional-information" name="additional" id="additional" cols="60" rows="9" placeholder="Im intrested in.."></textarea>
+        <br><br>
+
+        <label for="tnc">I agree to the Terms and Conditions.</label>
+        <input type="checkbox" name="tnc" id="tnc" required>
+        <br><br>
+
+        <button type="submit">Submit Application</button>
+    </form>
 </body>
 </html>
