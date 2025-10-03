@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <div style="display: flex; gap: 2px;">
+        <div style="display: flex; flex-direction: column; gap: 20px; padding: 20px;">
+            <img src="image.webp" alt="image" width="300" loading="lazy">
+            
+            <video width="300" controls loading="lazy">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <audio src="audio.mp3" alt="audio" loading="lazy" controls></audio>
+            
+        </div>
+        
+        <div style="border-left : 2px solid black; border-right: 2px solid black; padding: 20px;">
+            
+            <iframe src="../lecture10/resume.html" width="790px" height="540"></iframe>
+        </div>
+
+        <div style="padding: 20px;">
+            <iframe width="300" src="https://www.youtube.com/watch?v=HgQ14BpEfCs"></iframe>
+            <br><br>
+            <!-- will not work change watch?v= to embed/-->
+            <iframe width="300" src="https://www.youtube.com/embed/HgQ14BpEfCs"></iframe>
+        </div>
+    </div>
+</body>
+</html>
