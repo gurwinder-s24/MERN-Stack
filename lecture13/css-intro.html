@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- here if we interchange positions -->
+    <!-- of int vs ext the background-color -->
+    <!-- of last paragraph will change accordingly -->
+    <!-- <link rel="stylesheet" href="external.css"> -->
+    <style>
+        h1 {
+            color: green;
+            border-bottom: 2px solid black;
+        }
+        .c1 {
+            color: blueviolet;
+            background-color: lightgray;
+        }
+    </style>
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+    <header><h1>Header</h1></header>
+
+    <main>
+        <!-- inline css -->
+        <p style="background-color: lightblue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aperiam inventore modi eaque reiciendis velit rerum deserunt explicabo ullam impedit!</p>
+        <!-- internal css -->
+        <p class="c1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat laboriosam, velit repellendus minima non adipisci perspiciatis fuga sint quasi facilis quidem exercitationem nostrum alias enim ut consequatur fugiat! Id, ipsam accusamus nam delectus aliquam harum dolore sed omnis. Placeat, unde?</p>
+        <!-- external css -->
+        <p class="c2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, quam. Illum cum sit neque temporibus qui? Id a illum in inventore eum officiis at repudiandae fugit exercitationem. Ex adipisci velit inventore eveniet quae illo, tempore sed neque minima accusamus voluptatibus odit ducimus quasi qui at iure fuga numquam voluptatem mollitia! Unde eum dolorum assumenda sed, corrupti ea temporibus deleniti aut.</p>
+        
+        <!-- if same attribute found and !important tag not used -->
+        <!-- then internal vs external is choosed based on order -->
+        <p class="c1 c2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+    </main>
+
+    <footer style="border-top: 2px solid black;"><br>Footer</footer>
+</body>
+</html>
+
+<!-- css selectors -->
+<!-- element for example 
+        p, div, span, h1, h2, ul, li
+        and their complex combinations
+        like div p span, ul li a
+        and their pseudo selectors
+        like a:hover, li:nth-child(2) etc
+-->
+
+<!-- #id -->
+<!-- .class -->
+<!-- attribute selector 
+        for example
+        [type="text"]
+        [data-red="true"]
+        [data-red^="tr"]  ^ for matching with beginning
+        [data-red$="ue"]  $ for matching with ending
+        [data-red*="r"]   * for matching anywhere
+-->
+
+<!-- complex selectors
+        div p
+        means p inside div element/container
+        div > p
+        means direct child p of div element/container
+        div + p
+        means p immediately after div element/container
+        div ~ p
+        means p after div element/container
+        div.classname
+        means div with class classname
+        .d li:hover
+        means hovering on li inside class d element/container
+        li:not(.c)
+        means li which does not have class c
+-->
+<!-- pseudo selectors
+        div.new::before {
+            content: "🔥 New!";
+            color: red;
+            font-weight: bold;
+        }
+        <div class="new">This is a new item.</div>
+
+        ->results will be
+        🔥 New! This is a new item.
+-->
+<!-- group selectors
+        for example div, p, span
+        .class1, .class2
+        [type="text"], [data-red="true"]
+-->
