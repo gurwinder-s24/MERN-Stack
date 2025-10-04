@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Boxmodel</title>
 
     <style>
         *{
@@ -43,7 +43,8 @@
             height: 300px;
             background-color: lightblue
         }
-        span{            
+        span{
+            margin: 20px;
             background-color: aqua;
             border: solid 5px;
             width: 250px;
@@ -70,6 +71,8 @@
         <!-- not woring ? -->
         <!-- because inline elements dont support box model -->
         <!-- so we need to change its dispay type -->
+        <!-- same goes for margin top/bottom margin -->
+        <!-- but left/right margin and padding will still work -->
     </span>
     <span class ="sp">
         This is a span. lets apply height
