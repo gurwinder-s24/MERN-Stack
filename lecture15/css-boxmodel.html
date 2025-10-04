@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /* box-sizing: border-box; */
+        }
+        h1{
+            width: 250px;
+            height: 100px;
+            background-color: aquamarine;
+            border-style: solid;
+            border-width: 5px;
+            border-color: brown;
+            /*  if you shuffel the following two
+                contradictory lines then the bottom-most
+                line win and property will be appplied 
+                to the contradictory region
+            */
+            border-radius: 10px;
+            border-top-left-radius: 0px;
+        }
+        .first{
+            width: 400px;
+            height: 100px;
+            background-color: blanchedalmond;
+            border-bottom: solid black 3px;
+            
+        }
+        .second{
+            width: 400px;
+            height: 200px;            
+            background-color: beige;
+        }
+        .third{
+            width: 400px;
+            height: 300px;
+            background-color: lightblue
+        }
+        span{            
+            background-color: aqua;
+            border: solid 5px;
+            width: 250px;
+            height: 100px;
+        }
+        .sp{
+            margin-top: 20px;
+            display: block; /* now it will work */
+            background-color: aqua;
+            border: solid 5px;
+            width: 250px;
+            height: 100px;
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <h1>Welcome</h1>
+    <span>
+        This is a span. lets apply height
+        and width to it and see what happens.
+        <!-- not woring ? -->
+        <!-- because inline elements dont support box model -->
+        <!-- so we need to change its dispay type -->
+    </span>
+    <span class ="sp">
+        This is a span. lets apply height
+        and width to it and see what happens.
+    </span>
+
+    <p class="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, necessitatibus perferendis earum iste laboriosam odit quia recusandae natus expedita in vitae. Maxime, est odio.</p>
+    <p class="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, aliquid odit dolor molestias quo temporibus libero asperiores suscipit mollitia, nesciunt deleniti voluptatem perspiciatis blanditiis in iste minima ex modi unde atque doloribus? Alias veniam dicta, numquam tempore atque aspernatur animi odit eaque hic incidunt placeat aut, reiciendis ut!</p>
+    <p class="third">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, odio, quaerat ipsum accusamus harum et repellendus assumenda rem aperiam expedita asperiores nobis iste ut facere molestias quasi ex repudiandae cum officiis. Nulla doloribus, maxime exercitationem doloremque autem temporibus provident ex commodi repellendus officia adipisci voluptates labore qui dolores sit fuga sed incidunt. Cumque ea aperiam voluptate, dignissimos expedita incidunt quibusdam modi nobis, voluptatem, excepturi harum repellendus debitis fuga? Harum, quasi? Distinctio, quos!</p>
+    
+</body>
+</html>
+
+<!-- 
+    best practice:
+    use universal selector *
+    for removing default margin and padding
+    and set them to 0 initially in * selector
+    then use another css rule to set
+    margin and padding to respective elements
+-->
+
+<!-- 
+    box-sizing: border-box;
+    this property makes the width and height
+    include padding and border
+    so that the total width and height
+    remains the same as specified
+    otherwise the total width and height
+    will be calculated as:
+    total width = width + padding-left + padding-right + border-left + border-right
+    total height = height + padding-top + padding-bottom + border-top + border-bottom
+    which may lead to overflow of the element
+
+-->
