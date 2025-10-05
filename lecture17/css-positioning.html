@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        div{
+            border: 1px solid white;
+        }
+        img{
+            margin: 10px;
+        }
+        .image1{
+            top: 50px;
+            left: 50px;
+            /* will not work because by default  */
+            /* position property is static  */
+        }
+        .image2{
+            /* will be applied wrt */
+            /* current window of the element */
+            position: relative;
+            top: 100px;
+            right: 100px;
+            /* gap that was maintained or the window */
+            /* it was occupying is still there */
+        }
+        .container{
+            position: relative;
+            width: 2000px;
+            height : 2000px;
+            /* we are marking it relative */
+            /* to use absolute property in its childs */
+        }
+        .image3{
+            /* will be applied wrt */
+            /* parent element which is marked relative */
+            position: absolute;
+            /* the gap that was maintained or the window */
+            /* it was occupying is now cut off it is  */
+            /* now like an absolute point in the space */
+            /* so the next element will overlap it and cover it */
+        }
+        .image4{
+            position: fixed;
+            filter: grayscale(100%);
+            /* behaves like absolute means */
+            /* gap not maintained but */
+            /* stays in the same place even when  */
+            /* the page is scrolled. */
+        }
+        .image5{
+            position: sticky;
+            top: 300px;
+            /* behaves like relative and fixed combination*/
+            /* will act like relative means gap maintained*/
+            /* will act like fixed beacuse stays in same */
+            /* position while scrolling until a certain point */
+        }
+        .box{
+            background-color: aqua;
+            height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img
+            class="image1"
+            src="image.webp"
+            alt="poster1"
+            width="300px"
+            height="300px"
+        />
+        <img
+            class="image2"
+            src="image.webp"
+            alt="poster2"
+            width="300px"
+            height="300px"
+        />
+        <img
+            class="image3"
+            src="image.webp"
+            alt="poster3"
+            width="300px"
+            height="300px"
+        />
+        <img
+            class="image4"
+            src="image.webp"
+            alt="poster4"
+            width="300px"
+            height="300px"
+        />
+        <img
+            class="image5"
+            src="image.webp"
+            alt="poster5"
+            width="300px"
+            height="300px"
+        />
+        <img
+            class="image6"
+            src="image.webp"
+            alt="poster6"
+            width="300px"
+            height="300px"
+        />
+        
+        
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+</html>
