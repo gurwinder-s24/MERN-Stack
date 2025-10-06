@@ -1,0 +1,101 @@
+<!-- flexible box -->
+<!-- 1 Dimensional Layout model-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .container{
+            height: 500px;
+            /* overflow: auto; */
+            background-color: beige;
+            border: 4px solid green;
+            margin: 4px;
+            padding: 4px;
+            display: flex;
+            
+            /* default flex direction is row */
+            /* flex-direction: column; */
+            /* or row-reverse or column-reverse*/
+            /* flex-wrap: wrap; */
+            /* or wrap-reverse or nowrap*/
+            flex-flow: row nowrap;
+            /* shorthand notation for setting both dir and wrap */
+            /* flex-flow: <flex-direction> <flex-wrap>; */
+            
+            /* justify content wrt main axis */
+            justify-content: center;
+            /* or start or end*/
+
+            /* aling items wrt cross axis */
+            align-items: center;
+            /* align-items: stretch; */
+            /* default is stretch */
+
+            /* align content */
+            justify-content: start;
+            align-items: start;
+            /* align-content: start; */
+
+        }
+        .box{
+            color: black;
+            /* height: 200px; */
+            /* commenting height to use stretch */
+            /* can comment width in case if flex dir is column */
+            width: 200px;
+            margin: 2px;
+            padding: 2px;
+        }
+        #b1{
+            background-color: aqua;
+            /* item properties */
+            order: 400;
+            align-self: center;
+            /* flex-shrink: 4;
+            flex-grow: 1; */
+        }
+        #b2{
+            background-color: blue;
+            /* flex-shrink: 1;
+            flex-grow: 10; */
+        }
+        #b3{
+            background-color: pink;
+            order: -2;
+            /* flex-shrink: 1; */
+            /* flex-grow: 1; */
+            /* shorthand notation flex: grow shrink basis*/
+            flex: 1 1 400px;
+        }
+        #b4{
+            background-color: lightgreen;
+            order: -1;
+            /* flex-shrink: 1;
+            flex-grow: 1; */
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+    <div class="container">
+        <div class="box" id="b1">Box 1</div>
+        <div class="box" id="b2">Box 2</div>
+        <div class="box" id="b3">Box 3</div>
+        <div class="box" id="b4">Box 4</div>
+    </div>
+
+</body>
+</html>
