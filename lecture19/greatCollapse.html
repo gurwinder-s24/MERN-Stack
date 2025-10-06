@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Collape.</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .item{
+            width: 200px;
+            height: 200px;
+            margin: 2px;
+            padding: 4px;
+            border: 2px solid brown;
+            /* now if we do float left the parent will collapse */
+            float: left;
+            color: white;
+            /* same goes for float right */
+        }
+        .box{
+            margin-top: 40px;
+            border: 2px solid white;
+            /* to remove this overflow */
+            overflow: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="item" id="i1">A</div>
+        <div class="item" id="i2">B</div>
+        <div class="item" id="i3">C</div>
+    </div>
+</body>
+</html>

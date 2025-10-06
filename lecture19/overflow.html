@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        p{
+            font-size: 1.1vw;
+            color: aqua;
+        }
+
+        .container{
+            width: vw;
+            height: 25vw;
+            border: 2px solid burlywood;
+            overflow: auto;
+            /* first it try to change height but we fixed*/
+            /* its height so now it will adjust accordingly */
+            /* for example here now only vertical scroll-bar */
+            /* is coming but if we write scroll then both will */
+            /* even if not needed */
+        }
+        .box{
+            width: 30vw;
+            height: 30vw;
+            border: 2px solid white;
+            display: inline-block;
+        }
+        #i1{
+            /* even if you not mention by default overflow will be visible */
+            overflow: visible;
+        }
+        #i2{
+            overflow: hidden;
+        }
+        #i3{
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="box" id="i1">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cumque illum fugiat. Quae iste exercitationem consequatur placeat voluptate laboriosam earum, error harum velit quaerat, perspiciatis distinctio? Alias, mollitia quas iste tenetur saepe porro quia enim corrupti, minus sequi animi! Consequatur quidem possimus, dolorem corrupti soluta saepe. Nostrum laboriosam unde quasi amet incidunt eius ea dolores, veritatis odit fugiat quae vel omnis corrupti, cumque nulla accusantium. Voluptatem vel architecto modi, facilis ex officiis voluptatibus, obcaecati repellat adipisci cumque libero illo aliquid sunt reiciendis, facere vitae! Distinctio ex voluptas perferendis. Voluptas inventore molestias quia animi porro doloribus repellat quas, modi iste laborum ipsam? Numquam, itaque cum quas dolorem ratione ex magnam eum iure. Voluptate fuga obcaecati vitae exercitationem unde minima hic, aperiam praesentium alias perspiciatis tempora odit repellendus non iste dignissimos. Recusandae corporis labore esse numquam quod praesentium adipisci beatae magni fuga, similique iusto ab libero temporibus voluptatum non ea provident dolor, ipsa eum laborum odio cum rem sed? Mollitia quisquam ducimus quas quo qui ipsam culpa ipsa eius suscipit obcaecati, corporis similique consequatur aut facilis eveniet consectetur. Adipisci possimus deserunt corrupti? Corporis porro nihil obcaecati natus autem tempora! Voluptatem corporis sed est temporibus aperiam eaque nulla facere, dignissimos amet reiciendis cum quia voluptate ducimus maxime ex commodi eius totam nemo? Quaerat ipsa fuga accusantium unde tempora. Fugit eius quas totam quo a, et distinctio quae fuga voluptatibus dolores iusto nihil libero numquam aliquam amet hic sit dicta blanditiis tenetur obcaecati dolore? Atque perferendis quia dicta corrupti, similique delectus praesentium doloremque ipsam.
+            </p>
+        </div>
+        
+        <div class="box" id="i2">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cumque illum fugiat. Quae iste exercitationem consequatur placeat voluptate laboriosam earum, error harum velit quaerat, perspiciatis distinctio? Alias, mollitia quas iste tenetur saepe porro quia enim corrupti, minus sequi animi! Consequatur quidem possimus, dolorem corrupti soluta saepe. Nostrum laboriosam unde quasi amet incidunt eius ea dolores, veritatis odit fugiat quae vel omnis corrupti, cumque nulla accusantium. Voluptatem vel architecto modi, facilis ex officiis voluptatibus, obcaecati repellat adipisci cumque libero illo aliquid sunt reiciendis, facere vitae! Distinctio ex voluptas perferendis. Voluptas inventore molestias quia animi porro doloribus repellat quas, modi iste laborum ipsam? Numquam, itaque cum quas dolorem ratione ex magnam eum iure. Voluptate fuga obcaecati vitae exercitationem unde minima hic, aperiam praesentium alias perspiciatis tempora odit repellendus non iste dignissimos. Recusandae corporis labore esse numquam quod praesentium adipisci beatae magni fuga, similique iusto ab libero temporibus voluptatum non ea provident dolor, ipsa eum laborum odio cum rem sed? Mollitia quisquam ducimus quas quo qui ipsam culpa ipsa eius suscipit obcaecati, corporis similique consequatur aut facilis eveniet consectetur. Adipisci possimus deserunt corrupti? Corporis porro nihil obcaecati natus autem tempora! Voluptatem corporis sed est temporibus aperiam eaque nulla facere, dignissimos amet reiciendis cum quia voluptate ducimus maxime ex commodi eius totam nemo? Quaerat ipsa fuga accusantium unde tempora. Fugit eius quas totam quo a, et distinctio quae fuga voluptatibus dolores iusto nihil libero numquam aliquam amet hic sit dicta blanditiis tenetur obcaecati dolore? Atque perferendis quia dicta corrupti, similique delectus praesentium doloremque ipsam.
+            </p>
+        </div>
+        
+        <div class="box" id="i3">
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci cumque illum fugiat. Quae iste exercitationem consequatur placeat voluptate laboriosam earum, error harum velit quaerat, perspiciatis distinctio? Alias, mollitia quas iste tenetur saepe porro quia enim corrupti, minus sequi animi! Consequatur quidem possimus, dolorem corrupti soluta saepe. Nostrum laboriosam unde quasi amet incidunt eius ea dolores, veritatis odit fugiat quae vel omnis corrupti, cumque nulla accusantium. Voluptatem vel architecto modi, facilis ex officiis voluptatibus, obcaecati repellat adipisci cumque libero illo aliquid sunt reiciendis, facere vitae! Distinctio ex voluptas perferendis. Voluptas inventore molestias quia animi porro doloribus repellat quas, modi iste laborum ipsam? Numquam, itaque cum quas dolorem ratione ex magnam eum iure. Voluptate fuga obcaecati vitae exercitationem unde minima hic, aperiam praesentium alias perspiciatis tempora odit repellendus non iste dignissimos. Recusandae corporis labore esse numquam quod praesentium adipisci beatae magni fuga, similique iusto ab libero temporibus voluptatum non ea provident dolor, ipsa eum laborum odio cum rem sed? Mollitia quisquam ducimus quas quo qui ipsam culpa ipsa eius suscipit obcaecati, corporis similique consequatur aut facilis eveniet consectetur. Adipisci possimus deserunt corrupti? Corporis porro nihil obcaecati natus autem tempora! Voluptatem corporis sed est temporibus aperiam eaque nulla facere, dignissimos amet reiciendis cum quia voluptate ducimus maxime ex commodi eius totam nemo? Quaerat ipsa fuga accusantium unde tempora. Fugit eius quas totam quo a, et distinctio quae fuga voluptatibus dolores iusto nihil libero numquam aliquam amet hic sit dicta blanditiis tenetur obcaecati dolore? Atque perferendis quia dicta corrupti, similique delectus praesentium doloremque ipsam.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
+
+
+<!--
+    overflow:
+        visible
+        hidden
+        scroll
+        auto
+-->
