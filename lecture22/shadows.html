@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root{
+            /* to create universal variables */
+            --custom: 150px;
+            /* good practice is to mention type in variable name */
+            /* to make the code easy to understand for others */
+            /* for example here --custom-width instead of just --custom */
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        .container{
+            height: 100vh;
+            background-color: lightblue;
+            border: 4px solid black;
+            padding: 2px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .box{
+            background-color: lightgray;
+            height: 150px;
+            width: var(--custom);
+            border: 2px solid black;
+            margin: 2px;
+            padding: 2px;
+            --primary-color: brown;
+            /* syntax to create a variable in html */
+            /* its scope is only under these curly braces */
+            /* for example scope is only box class */
+        }
+        #b01{
+            box-shadow: 20px 20px 10px  var(--primary-color);
+        }
+        #b02{
+            box-shadow: 20px 20px 0px 5px var(--primary-color);
+        }
+        #b03{
+            box-shadow: inset 20px 20px 10px  var(--primary-color);
+        }
+        #b04{
+            box-shadow: 10px 10px lightgreen, 20px 20px black;
+        }
+        #b05{
+            width: 400px;
+            height: 400px;
+            overflow: auto;
+            p{
+                height: 90%;
+                background-color: inherit;
+                color: black;
+                border: 2px solid darkcyan;
+
+                text-shadow: 10px 10px;/* wiii pick same color as text*/
+                /* text-shadow: 10px 10px white; */
+                text-shadow: brown 10px 10px 1px;
+                /* no spread attribute is there in this case */
+                /* can add multiple shadows using comma seperated values */
+
+            }
+        }   
+    </style>
+    
+</head>
+<body>
+                      
+    <div class="container">
+        <div class="box" id="b01">
+            Box 1
+        </div>
+        <div class="box" id="b02">
+            Box 2
+        </div>
+        <div class="box" id="b03">
+            Box 3
+        </div>
+        <div class="box "id="b04">
+            Box 4
+        </div>
+        <div class="box "id="b05">
+            Box 5
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, veniam?</p>
+        </div>
+        
+    </div>
+</body>
+</html>
+
+<!-- syntax -->
+<!-- 
+    box    
+        box-shadow: <x-offset> <y-offset> <+ve_blur-radius> <spread-radius> <color>;
+        box:shadow: inset ...;
+        box:shadow: ...1 , ...2; in this case if overlap then shadow 1 wil cover the shadow 2
+    
+    global
+        box-shadow: inherit;
+        box-shadow: initial;
+        box-shadow: revert;
+        box-shadow: revert-layer;
+        box-shadow: none;
+ -->
