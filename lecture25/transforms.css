@@ -1,0 +1,40 @@
+
+.box:hover{
+    transform: rotate(30deg);
+    transition: all 0.5s linear 0s;
+}
+
+.circle:hover{
+    transform: scale(1.685);
+    transition: transform 0.5s ease-out 0s;
+}
+
+#box1:hover{
+    transform: skewY(54deg);
+    transition: all 0.5s linear 0s;
+}
+
+#box2:hover{
+    transform: skewY(54deg);
+    transition: all 0.5s linear 0s;
+}
+
+#box1:hover{
+    transform: translate(0px, 34px);
+    transition: all 0.5s linear 0s;
+}
+
+#box2:hover{
+    transform: translate(0px, -34px);
+    transition: all 0.5s linear 0s;
+}
+
+
+/* 
+    rotate
+    skew
+    skewY
+    translate
+
+    transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY);
+*/

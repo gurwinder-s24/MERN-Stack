@@ -17,9 +17,8 @@
 }
 
 #box2{
-    position: relative;
     top: 170px;
-    right: 0px;
+    left: 0px;
 
     transition-property: all;
     transition-duration: 1s;

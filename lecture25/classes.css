@@ -1,0 +1,40 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: black;
+}
+.container{
+    width: 100vw;
+    height: 150vh;
+    background-color: lightblue;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow: auto;
+}
+.box{
+    width: 350px;
+    height: 350px;
+    background-color: rgb(47, 70, 90);
+    border: 3px solid black;
+    border-radius: 10px;
+    margin: 13px;
+    position: relative;
+}
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: lightpink;
+    border: 3px solid black;
+    border-radius: 50px;
+    margin: 20px;
+
+    position: relative;
+    /* top: 80px;
+    left: 40%; */
+}
