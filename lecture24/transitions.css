@@ -1,0 +1,40 @@
+/*  transition: (single step state change)
+    when an element changes from 
+    its initial state to final state 
+*/
+
+.box:hover{
+    width: 700px;
+    background-color: black;
+}
+
+
+#box1{
+    transition-property: width;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: linear;
+}
+
+#box2{
+    position: relative;
+    top: 170px;
+    right: 0px;
+
+    transition-property: all;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+
+.circle:hover{
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    box-shadow: 0px 0px 100px 20px brown;
+    background-color: brown;
+}
+
+#circle{
+    transition: all 1s linear 0s;
+}
