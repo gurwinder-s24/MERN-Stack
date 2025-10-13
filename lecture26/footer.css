@@ -1,0 +1,22 @@
+footer{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.footerBox{
+    height: auto;
+    width: 100%;
+    background-color: #000000;
+    background-image: linear-gradient(160deg, #000000 0%, #8085D0 100%);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.footerBox p{
+    padding: 4px;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-self: center;
+}

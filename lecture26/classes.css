@@ -1,0 +1,37 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.universe{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: black;
+}
+
+
+.container{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: #e3ffe7;
+    background-image: linear-gradient(90deg, #e0ede2 0%, #e2ecff 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    position: relative;
+    /* overflow: hidden; */
+    /* to use absolute positioning in footer */
+}
+
+/* 
+    in universe we used width 100% instead 100vw because
+    when content grows vertically the vertical scrollbar
+    appears and due to that we are not able to see full
+    horizontal content so a horizontal scrollbar also
+    appear with it which we want to avoid..
+*/

@@ -31,10 +31,25 @@
 
 
 /* 
-    rotate
-    skew
-    skewY
-    translate
+rotate
+skew
+skewY
+translate
 
-    transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY);
+transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY);
 */
+
+
+
+
+/* 
+.circle{
+    animation: 1s linear 0s infinite normal none  upDown;
+}
+@keyframes upDown{
+    0%{ top: 0%; left: 0%;}
+    25%{ transform: translate(0px, -34px);}
+    50%{ top: 0%; left: 0%}
+    75%{ transform: translate(0px, 34px);}
+    100%{ top: 0%; left: 0%}
+} */
