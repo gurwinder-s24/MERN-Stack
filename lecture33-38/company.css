@@ -1,0 +1,47 @@
+
+.company-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    animation: slideFromLeft 1s ease;
+    /* animation already defined in content.css */
+}
+
+.company-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.6rem;
+
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: 0.625rem;
+    margin-top: 2rem;
+    padding: 1.8rem 2.5rem;
+}
+@media screen and (min-width: 768px){
+    .company-grid{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .company-title{
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+}
+
+.company-logo{
+    font-size: 1rem;
+    font-weight: 500;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+.svg-img{
+    height: 1.56rem;
+}
+.company-name{
+    font-size: inherit;
+}
