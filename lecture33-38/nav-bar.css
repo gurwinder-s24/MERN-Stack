@@ -1,0 +1,98 @@
+/* .header{ border: 1px solid black; } */
+.header-content{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.logo-icon{
+    width: 1.938rem;
+    height: 5.875rem;
+}
+.logo-text{
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+
+nav{
+    display: none;
+    align-items: center;
+    gap: 1.5rem;
+
+}
+@media screen and (min-width:768px){
+    .nav{
+        display: flex;
+    }
+}
+.nav-link{
+    color: var(--nav-link-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+
+    transition: color 0.1s;
+}
+.nav-link:hover{
+    color: var(--link-color);
+}
+
+
+.contact-button{
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    transition: all 0.1s;
+    padding: 0.75rem 1.5rem;
+;
+}
+@media screen and (min-width:768px){
+    .contact-button{
+        display: block;
+    }
+}
+.contact-button:hover{
+    background-color: var(--secondary-color);
+}
+
+
+.menu-button{
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--background-color);
+    padding: 0.5rem 0.9rem;
+}
+@media screen and (max-width:768px){
+    .menu-button{
+        display: block;
+    }
+}
+.menu-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* 
+    :active
+    :focus
+    :focus-visible
+*/
