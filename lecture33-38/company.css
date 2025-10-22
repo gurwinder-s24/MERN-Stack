@@ -6,6 +6,7 @@
     align-items: center;
     margin-top: 2rem;
     animation: slideFromLeft 1s ease;
+    padding: 0 1rem;
     /* animation already defined in content.css */
 }
 
@@ -17,8 +18,9 @@
     background-color: var(--light-gray);
     border: none;
     border-radius: 0.625rem;
-    margin-top: 2rem;
     padding: 1.8rem 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px){
     .company-grid{
