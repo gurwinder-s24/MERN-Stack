@@ -1,0 +1,173 @@
+.newsletter-container{
+    /* border: 1px solid black; */
+    /* padding: 2rem 0; */
+    padding: 2rem 1rem;
+}
+
+.newsletter-content{
+    max-width: 1280px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: var(--light-gray);
+    padding: 0 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+ 
+    /*  two reasons of collapsing height of children due parent height is not explicitly fixed (auto or 100%)*/
+    /*  removed align items center because it was causing height 
+        shrinking of either left or right side based on content overflow
+        of the other side [AND] removed height 100% from left and right children
+        because it was causing circular dependency and collapsing of height
+    */
+    align-items: stretch;
+
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+
+.news-left{
+    width: 50%;
+    /* height: 100%; */
+}
+.news-left img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    /* removing reserved white space under image*/
+    /* vertical-align: top; */
+    display: block;
+}
+
+.news-right{
+    width: 50%;
+    /* height: 100%; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 4rem;
+    align-items: flex-start;
+}
+
+.news-info{
+    text-align: left;
+}
+.news-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.news-desc{
+    font-size: 1rem;
+    color: #777;
+}
+
+.news-form{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    gap: 0.6rem;
+}
+
+.news-email{
+    min-width: 101.2px;
+
+    background-color: var(--background-color);
+    color: #333;
+    outline: none;
+    border-radius: 4px;
+    padding: 0.5rem 0.75rem;
+}
+.news-email:focus{
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width:404.8px) and (max-width:640px) {
+    .news-form{
+        flex-wrap: nowrap;
+    }
+}
+@media screen and (max-width:404.8px) {
+    .news-form{
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .news-email{
+        width: 100%;
+    }
+    .news-send-button{
+        align-self: flex-start;
+    }
+}
+
+.news-send-button{
+    border: none;
+    border-radius: 0.25rem;
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 0.5rem 1rem;
+
+    /* transition: background-color 0.1s; */
+}
+
+
+/*  to apply transitions only after body is loaded
+    initially after loading it was applying transition
+    from transparent to primary color also which was
+    not desired similarly we can do for other elements
+    that we designed in initial lectures
+*/
+body.loaded .news-send-button{
+    transition: background-color 0.1s;
+}
+
+.news-send-button:hover{
+    background-color: var(--secondary-color);
+}
+
+.news-conditions{
+    text-align: left;
+    font-size: 0.76rem;
+    color: #555;
+}
+.news-link{
+    color: var(--link-color);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 640px) {
+    .newsletter-container{
+        padding: 2rem 0;
+    }
+    .newsletter-content{
+        border-radius: 0;
+    }
+    .news-left{
+        display: none;
+    }
+    .news-right{
+        width: 100%;
+        padding: 6rem 4rem;
+    }
+    .news-title{
+        font-size: 1.5rem;
+    }
+    .news-desc{
+        font-size: 0.875rem;
+    }
+}
+
+/* @media screen and (min-width: 1200px) and (max-width: 1280px) {
+    .newsletter-container{
+        padding: 2rem 0;
+    }
+    .newsletter-content{
+        border-radius: 0;
+    }
+} */

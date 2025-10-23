@@ -10,9 +10,11 @@
     <link rel="stylesheet" href="company.css">
     <link rel="stylesheet" href="features.css">
     <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="newsletter.css">
 
 </head>
-<body>
+<!-- to apply transitions only after body is loaded -->
+<body onload="document.body.classList.add('loaded')">
     <div class="container">
 
         <div class="header">
@@ -228,6 +230,47 @@
                                 School Administrator
                             </p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <div class="news-left">
+                    <img
+                        src="./images/img.png"
+                        alt="newsletterImage"
+                        loading="lazy"
+                    />
+                </div>
+
+                <div class="news-right">
+                    <div class="news-info">
+                        <h2 class="news-title">
+                            Get the latest updates
+                        </h2>
+                        <p class="news-desc">
+                            Sign up for our newsletter
+                        </p>
+                    </div>
+
+                    <form class="news-form">
+                        <input class="news-email" type="email" placeholder="Email" required>
+                        <button class="news-send-button" type="button">
+                            Send
+                        </button>
+                    </form>
+
+                    <div class="news-conditions">
+                        By signing up to our newsletter, you agree to our
+                        <a href="#terms" class="news-link">
+                            Terms of Service
+                        </a>
+                        and
+                        <a href="#privacy" class="news-link">
+                            Privacy Policy
+                        </a>
                     </div>
                 </div>
             </div>
