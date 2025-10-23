@@ -80,12 +80,13 @@
     background-color: var(--background-color);
     color: #333;
     outline: none;
+    border: 1px solid #777;
     border-radius: 4px;
     padding: 0.5rem 0.75rem;
 }
 .news-email:focus{
     border-color: var(--primary-color);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width:404.8px) and (max-width:640px) {
     .news-form{
