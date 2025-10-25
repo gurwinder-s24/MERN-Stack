@@ -8,5 +8,5 @@
 * Cards [&#x1F517;](./lecture27/) <br>
   Mini-Project-02
 
-* Cards [&#x1F517;](./lecture33-38/) <br>
+* StudySync [&#x1F517;](./lecture33-38/) <br>
   Project-01
