@@ -34,6 +34,7 @@ nav{
     justify-content: space-around;
     list-style-type: none;
     color: azure;
+    column-gap: 5rem;
 }
 #navItems li{
     align-self: center;
