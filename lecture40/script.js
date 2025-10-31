@@ -52,6 +52,8 @@ console.log(d);
 
 const pi = 3.14;
 console.log(pi);
+// block scoped like let
+
 // pi = 3.145;
 // re-assignment not possible
 
@@ -62,3 +64,22 @@ console.log(pi);
 // re-definition not possible
 
 
+
+
+
+// DATA TYPES
+// Primitive data types
+// number
+// string
+// boolean
+// null
+// undefined
+// symbol
+// bigint
+
+// Non-primitive data types
+// object
+// array
+// function
+// date
+// etc.
