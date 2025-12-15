@@ -1,0 +1,33 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+#fdiv{
+    background-color: turquoise;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.changeColor{
+    background-color: lightblue !important;
+    padding: 3rem;
+}
+
+#sdiv{
+    background-color: turquoise;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0.9rem;
+}
