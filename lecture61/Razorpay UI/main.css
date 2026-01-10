@@ -5,3 +5,7 @@
 body{
     min-height: 100vh;
 }
+
+@layer utilities {
+  .stroke-opacity-15 { stroke-opacity: 0.15; }
+}
