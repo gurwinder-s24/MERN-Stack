@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razorpay</title>
     <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/feather-icons"></script>
 </head>
 <body class="overflow-x-hidden">
     <div class="my-container">
@@ -80,12 +81,22 @@
                         border border-lightBlue rounded text-sm font-bold">
                         Log in
                     </button>
-                    <button class="flex items-center gap-3 py-3 px-4 text-sm font-medium rounded bg-white text-lightBlue300
+                    <button class="flex items-center py-3 px-4 text-sm font-medium rounded bg-white text-lightBlue300
                         font-mulish hover:text-lightBlue500 border transition-all duration-200">
                         Sign Up
-                        <div class="opacity-70">
+                        <!-- <div class="opacity-70">
                             <img src="./images/arrow-right.svg" alt="arrow" class="w-4 h-4 mr-[-2px]">
-                        </div>
+                        </div> --> <!-- if using image use gap-3 -->
+                        <svg
+                            viewBox="0 0 24 24"
+                            focusable="false"
+                            class="w-[14px] h-[14px] ml-3"
+                            >
+                            <path
+                                fill="currentColor"
+                                d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                            ></path>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -123,7 +134,89 @@
 
         </div>
         
+        <!-- Feature section -->
+        <section class="relative mt-[120px] overflow-hidden">
+            <img src="./images/feature-section1-dottedrows.png" alt="" loading="lazy" width="233" height="167"
+            class="absolute -top-[8rem] left-[10rem] -z-10 inline-block">
+
+            <img src="./images/feature-section1-dottedrows.png" alt="" loading="lazy" width="233" height="167"
+            class="absolute  top-[3rem] right-0 rotate-180 inline-block">
+
+            <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
+                <h2 class="font-mulish text-center text-2xl leading-[1.2] font-bold">Accept Payments with Razorpay Payment Suite</h2>
+                <div class="w-6 h-1 bg-greenLight mx-auto mt-3"></div>
+
+                <!-- content box -->
+                <div class="w-full min-h-[520px]  bg-white flex rounded-md relative p-10 py-12 border mt-16">
+
+                    <!-- left section -->
+                    <div class="flex flex-col justify-between w-full">
+                        <h3 class="font-mulish text-[28px] leading-10 font-bold max-w-[500px]">
+                            Supercharge your business with the all-powerful
+                            <span class="text-lightBlue">Payment Gateway</span>
+                        </h3>
+
+                        <ul class="space-y-2">
+                            <li class="font-mulish flex items-center space-x-2">
+                                <i data-feather="check" class="text-greenLight"></i>
+                                <span>100+ Payment Methods</span>
+                            </li>
+                            <li class="font-mulish flex items-center space-x-2">
+                                <i data-feather="check" class="text-greenLight"></i>
+                                <span>Industry Leading Success Rate</span>
+                            </li>
+                            <li class="font-mulish flex items-center space-x-2">
+                                <i data-feather="check" class="text-greenLight"></i>
+                                <span>Superior Checkout Experience</span>
+                            </li>
+                            <li class="font-mulish flex items-center space-x-2">
+                                <i data-feather="check" class="text-greenLight"></i>
+                                <span>Easy to Integrate</span>
+                            </li>
+                            <li class="font-mulish flex items-center space-x-2">
+                                <i data-feather="check" class="text-greenLight"></i>
+                                <span>Instant Settlements from day 1</span>
+                            </li>
+                            <li class="font-mulish flex items-center space-x-2">
+                                <i data-feather="check" class="text-greenLight"></i>
+                                <span>In-depth Reporting and Insights</span>
+                            </li>
+                        </ul>
+
+                        <!-- for button and hyperlink -->
+                        <div class="flex flex-row items-center gap-4">
+                            <button class="flex items-center rounded-md font-mulish font-bold bg-lightBlue 
+                            transition-all text-white duration-200 px-4 py-3 hover:bg-lightBlue500">
+                                Sign Up Now
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    focusable="false"
+                                    class="w-[14px] h-[14px] ml-3"
+                                    >
+                                    <path
+                                        fill="currentColor"
+                                        d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                                    ></path>
+                                </svg>
+                            </button>
+                            <div class="flex items-center cursor-pointer group">
+                                <a href="#" class="font-mulish font-bold text-lightBlue500 group-hover:text-grayBlue transition-all duration-200">Know More</a>
+                                <i data-feather="chevron-right" class="w-5 h-5 text-lightBlue500 group-hover:text-grayBlue transition-all duration-200"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- right image -->
+                    <img src="./images/payment-suite.png" alt="" class="absolute max-w-[600px] right-0 bottom-0">
+
+                </div>
+            </div>
+        </section>
         
     </div>
+
+    <script>
+        feather.replace();
+    </script>
 </body>
 </html>
