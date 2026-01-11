@@ -8,4 +8,5 @@ body{
 
 @layer utilities {
   .stroke-opacity-15 { stroke-opacity: 0.15; }
+  .stroke-opacity-80 { stroke-opacity: 0.80; }
 }
