@@ -1,0 +1,9 @@
+// use react documentation to recomend suggestions in this file
+HOOK: hooks in react are functions that let you
+"hook into" [React state and lifecycle features] 
+from [function components].
+
+useState hook: This hook lets you add state to function components. 
+When you call useState, it returns an array with two elements:
+1. The current state value.
+2. A function that lets you update the state value.
