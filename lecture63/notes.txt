@@ -1,0 +1,7 @@
+Components: Function based or Class based
+Function based components are more popular.
+
+Function based components: Function that gives you
+JSX(some html jesa dikhne wala code) to render.
+
+Props: Data passed amoung components.
