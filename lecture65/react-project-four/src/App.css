@@ -1,0 +1,5 @@
+.app{
+    color: black;
+    display: flex;
+    gap: 10rem;
+}
