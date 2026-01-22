@@ -24,10 +24,11 @@
 // Create a slice using createSlice method from @reduxjs/toolkit.
 // folder herarchy
 // src
-//  └── redux
-//      └── features
-//          └── <feature-name>
-//              └── <feature-name>Slice.js
+// └── features
+//     └── <feature-name>
+//         └── <feature-name>Slice.jsx
+// (look at counterSlice.jsx for better understanding)
+
 
 // step 6:
 // In store.js file, import the reducer from the slice file and add it to the reducer object in configureStore method.
