@@ -1,4 +1,4 @@
-// useMemo Hook used to memoize values in react functional components
+// useMemo Hook used to memoize/cache values in react functional components
 // optimize performance by preventing unnecessary expensive recalculations of values
 import './App.css'
 import { useState, useMemo } from 'react'
