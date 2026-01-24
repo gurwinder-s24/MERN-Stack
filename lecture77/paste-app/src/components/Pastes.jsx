@@ -1,17 +1,17 @@
-import React from 'react'
+import { Calendar, Copy, Eye, PencilLine, Trash2, Share2 } from "lucide-react";
+import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { removeFromPastes } from '../redux/pasteSlice.jsx'
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-
+import { FormatDate } from '../utils/formatDate.js';
 
 const Pastes = () => {
   const pastes = useSelector((state) => state.paste.pastes); // state.sliceName.propertyName
-  console.log(pastes);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [searchTerm, setSearchTerm] = React.useState('');
+  const [searchTerm, setSearchTerm] = useState('');
   const filteredPastes = pastes.filter((paste) => 
     paste.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -30,45 +30,90 @@ const Pastes = () => {
 
   function handleCopy(content) {
     navigator.clipboard.writeText(content);
-    toast("Content copied to clipboard!");
+    toast("Content copied to clipboard!", {position: "top-right"});
+  }
+
+  function handleShare(pasteId) {
+    const shareableLink = `${window.location.origin}/pastes/${pasteId}`;
+    navigator.clipboard.writeText(shareableLink);
+    toast("Shareable link copied to clipboard!", {position: "top-right"});
   }
 
   return (
-    <div>
-      <input className='p-2 px-4 rounded-lg min-w-150 mt-5 bg-[#0e0e0e]'
-        type="search"
-        placeholder='search here...'
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <div className='flex flex-col gap-5 mt-5'>
-        {
-          filteredPastes.length > 0 &&
-          filteredPastes.map((paste) => {
-            return (
-              <div className='border' key={paste?._id}>
-
-                {paste.title} <br />
-                {paste.content}
-
-                <div className='flex flex-row gap-3'>
-                  <button onClick={() => handleEdit(paste?._id)}>Edit</button>
-                  <button onClick={() => handleView(paste?._id)}>View</button>
-                  <button onClick={() => handleDelete(paste?._id)}>Delete</button>
-                  <button onClick={() => handleCopy(paste?.content)}>Copy</button>
-                  <button>Share</button>
-                </div>
-
-                <div>
-                  {paste.createdAt}
-                </div>
-              </div>
-            )
-          }
-          )
-        }
+    <div className="flex flex-col gap-y-3 w-full h-full py-10 max-w-300 mx-auto px-5 lg:px-0">
+      {/* search bar */}
+      <div className="w-full flex gap-3 px-4 py-2  rounded-[0.3rem] border border-[rgba(128,121,121,0.3)]  mt-6">
+        <input className="focus:outline-none w-full bg-transparent"
+          type="search"
+          placeholder='search paste here...'
+          value={searchTerm} // Bind the input to searchTerm state
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
       </div>
 
+      {/* pastes list */}
+      <div className='flex flex-col border border-[rgba(128,121,121,0.3)] py-4 rounded-[0.4rem]'>
+        <h2 className="px-4 text-4xl font-bold border-b border-[rgba(128,121,121,0.3)] pb-4">
+          All Pastes
+        </h2>
+
+        <div className='w-full px-4 pt-4 flex flex-col gap-y-5'>
+        {
+          filteredPastes.length > 0 ? (
+            filteredPastes.map((paste) => (
+              <div key={paste?._id} className='border border-[rgba(128,121,121,0.3)] w-full gap-y-6 justify-between flex flex-col sm:flex-row p-4 rounded-[0.3rem]' >
+                {/* heading and description */}
+                <div>
+                  <p className='text-4xl font-semibold '>{paste?.title}</p>
+                  <p className='text-sm font-normal line-clamp-3 max-w-[80%] text-[#707070]'>{paste?.content}</p>
+                </div>
+
+                {/* utilities and additional info */}
+                <div className="flex flex-col gap-y-4 sm:items-end">
+                  {/* icons */}
+                  <div className='flex flex-row flex-wrap sm:flex-nowrap gap-2'>
+                    <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-blue-500"
+                      onClick={() => handleEdit(paste?._id)}>
+                      <PencilLine className="text-black group-hover:text-blue-500 size-5" />
+                    </button>
+
+                    <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-pink-500"
+                      onClick={() => handleDelete(paste?._id)}>
+                      <Trash2 className="text-black group-hover:text-pink-500 size-5" />
+                    </button>
+
+                    <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-orange-500"
+                      onClick={() => handleView(paste?._id)}>
+                      <Eye className="text-black group-hover:text-orange-500 size-5" />
+                    </button>
+
+                    <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-green-500"
+                      onClick={() => handleCopy(paste?.content)}>
+                      <Copy className="text-black group-hover:text-green-500 size-5" />
+                    </button>
+
+                    <button className="p-2 rounded-[0.2rem] bg-white border border-[#c7c7c7]  hover:bg-transparent group hover:border-cyan-500"
+                      onClick={() => handleShare(paste?._id)}>
+                      <Share2 className="text-black group-hover:text-cyan-500 size-5" />
+                    </button>
+                  </div>
+
+                  {/* date info */}
+                  <div className="gap-x-2 flex">
+                    <Calendar className="inline-block mr-2 size-5"/>
+                    {FormatDate(paste?.createdAt)}
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="text-2xl text-center w-full text-[#d64814]">
+              No Data Found
+            </div>
+          )
+        }
+        </div>
+      </div>
     </div>
   )
 }
