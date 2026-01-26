@@ -6,3 +6,9 @@ create index.js
 
 >npm install express
 // Install the Express.js framework and add it to the project's dependencies
+
+>npm install nodemon
+
+add "dev": "nodemon index.js",
+to the "scripts" section of package.json
+// to enable automatic server restarts during development
