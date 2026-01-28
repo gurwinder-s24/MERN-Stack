@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+// adding port in .env file is a good practice
+const dotenv = require('dotenv');
+dotenv.config();
+const port = process.env.PORT;
 
 // middleware to parse JSON bodies
 app.use(express.json());
@@ -20,5 +23,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(port, () => {
-  console.log(`Server is Up`);
+  console.log(`Server is Up!`);
 });
