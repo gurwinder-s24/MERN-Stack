@@ -7,6 +7,7 @@ function App() {
     register, 
     handleSubmit, 
     watch,
+    // setError,
     // formState: { errors, },
     formState: { errors, isSubmitting },
   } = useForm();
@@ -16,7 +17,9 @@ function App() {
     await new Promise(resolve => setTimeout(resolve, 2000));
     // found that we are able to submit multiple times even when the 
     // previous submission handling is not yet completed
-    console.log("submitted data:", data); 
+    console.log("submitted data:", data);
+    // can throw custom errors from here too if needed
+    // by using setError method from useForm
   }
 
   return (
