@@ -1,4 +1,20 @@
-# MERN-Stack
+# MERN-Stack 
+*Learning source: [YouTube playlist](https://youtube.com/playlist?list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD&si=qpfeXYoS4vf2q8QH)*
+
+## Course Components
+- HTML
+- CSS
+- JavaScript
+- Tailwind CSS
+- Responsive Web Design
+- React JS
+- Redux Toolkit
+- Express JS
+- MongoDB
+- Mongoose ODM
+- MVC Pattern
+
+
 ## Mini-Projects and navigation links to their codes
 
 ### HTML CSS
@@ -40,5 +56,5 @@
 ### Express-JS MongoDB Mongoose-ODM
 * Backend for a product listing application. [&#x1F517;](./lecture84/) <br>
   - Implemented basic CRUD operations using Express-JS and MongoDB with Mongoose ODM.(not the complete project, just learned about backend components)
-  - Leatned about MVC pattern for structuring backend code.
+  - Learned about MVC pattern for structuring backend code.
   - Tested APIs using Postman.
